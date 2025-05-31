@@ -298,7 +298,7 @@
       "_": "Etc",
       "powerdrain": ["PDrn", "Powerdrain"],
       "powerheal": ["PHeal", "Powerheal"],
-      "death": ["☠", "Deathcount"]
+      "death": ["💀", "Deathcount"]
     }
   },
   "zone": {
