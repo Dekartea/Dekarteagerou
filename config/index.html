@@ -215,25 +215,22 @@ document.addEventListener('DOMContentLoaded', _ => {
     <main>
 <section data-page="dek-settings">
 <article>
-<h3>Dekartea’s Tab Labels</h3>
+<h3>Dekartea's Tab Labels</h3>
+
 <p class="control">
-  <label for="label-per-second">DPS Label</label>
-  <input type="text" id="label-per-second" placeholder="🗡️/s" />
+  <label for="input-locale-deal-per_second">DPS Label</label>
+  <input id="input-locale-deal-per_second"
+         data-config-key="locale.deal.per_second.0"
+         placeholder="🗡️/s" />
 </p>
 
 <p class="control">
-  <label for="tooltip-per-second">DPS Tooltip</label>
-  <input type="text" id="tooltip-per-second" placeholder="per Second" />
+  <label for="input-locale-deal-per_second-desc">DPS Description</label>
+  <input id="input-locale-deal-per_second-desc"
+         data-config-key="locale.deal.per_second.1"
+         placeholder="per Second" />
 </p>
-<p class="control">
-    <label for="input-total-name">Total Damage</label>
-    <input
-      id="input-total-name"
-      type="text"
-      data-config-key="dekarta.locale.deal.total"
-      placeholder="Total Damage"
-    />
-  </p>
+
 </article>
 </section>
       <section data-page="general" class="active">
