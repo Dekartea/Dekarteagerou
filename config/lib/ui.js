@@ -59,6 +59,9 @@ const sendMessage = function sendMessage (message) {
 
   window.addEventListener('load', function(e) {
 
+
+    applyCustomLocales()
+    
     // menu switcher
     $map('.menu li[data-page]', _ => {
       let target = _.getAttribute('data-page')
