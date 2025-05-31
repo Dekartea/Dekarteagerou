@@ -252,7 +252,7 @@
     },
     "deal": {
       "_": "DPS",
-      "per_second": ["TEST!", "per Second"],
+      "per_second": ["DPS", "per Second"],
       "pct": ["%", "Deal %"],
       "total": ["🗡️", "Total"],
       "failure": ["Fail", "Failure (Miss / Swing)"],
@@ -283,7 +283,7 @@
     },
     "heal": {
       "_": "Heal",
-      "per_second": ["🩹/s", "per Second"],
+      "per_second": ["HPS", "per Second"],
       "pct": ["%", "Heal %"],
       "total": ["🩹", "Total"],
       "over": ["OvH%", "Overheal"],
