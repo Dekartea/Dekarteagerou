@@ -182,9 +182,10 @@
       if(!this.config.element['hide-footer'] ||
           this.config.element['use-header-instead']) {
         if(this.config.footer.rank) {
-          let el = this.elem.rank
-          el.firstChild.textContent = playerRank
-          el.lastChild.textContent = '/' + d.length
+        let el = this.elem.rank
+        let crown = '👑'
+        el.firstChild.textContent = (playerRank === 1) ? crown : playerRank
+        el.lastChild.textContent = '/' + d.length
         }
         if(this.config.footer.rdps) {
           this.elem.rdps.innerHTML =
