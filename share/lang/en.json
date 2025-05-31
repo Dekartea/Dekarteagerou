@@ -252,7 +252,7 @@
     },
     "deal": {
       "_": "DPS",
-      "per_second": ["🗡️/s", "per Second"],
+      "per_second": ["TEST!", "per Second"],
       "pct": ["%", "Deal %"],
       "total": ["🗡️", "Total"],
       "failure": ["Fail", "Failure (Miss / Swing)"],
