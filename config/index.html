@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', _ => {
  viewBox="0 0 24 24" class="icon">
  <path d="M12 2L2 7l10 5 10-5-10-5zm0 13l-10-5v6l10 5 10-5v-6l-10 5z"/>
  </svg>
- <label>Dekartea Settings</label>
+ <label>Dekartea's Settings</label>
 </li>
         <li class="mobile-only">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -215,19 +215,16 @@ document.addEventListener('DOMContentLoaded', _ => {
     <main>
 <section data-page="dek-settings">
 <article>
-<h3>Dekartea's Settings</h3>
+<h3 data-locale="dekartea.settings">Dekartea's Settings</h3>
 <p class="control">
-<label for="input-dekartea-option">
-        Enable Something Cool
-</label>
-<input type="checkbox" id="input-dekartea-option"
+<label for="input-dekartea-option"> Enable Something Cool</label>
+<input type="checkbox"
+id="input-dekartea-option"
 data-config-key="dekartea.cool"
 data-type="boolean" />
 </p>
 <p class="control">
-<label for="input-dekartea-note">
-Notes
-</label>
+<label for="input-dekartea-note">Notes</label>
 <input type="text" id="input-dekartea-note"
 data-config-key="dekartea.note"
 placeholder="Enter something..." />
