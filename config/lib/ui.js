@@ -1,5 +1,29 @@
 'use strict'
 
+//remove from here
+function applyCustomLocales() {
+  const keys = [
+    'deal.per_second.0',
+    'deal.per_second.1',
+    'deal.total.0',
+    'deal.total.1'
+    
+  ]
+
+  keys.forEach(key => {
+    const value = config.get('locale.' + key)
+    if (!value) return
+
+    const [section, name, index] = key.split('.')
+    const root = window.locale.locale['en']
+
+    if (root && root[section] && Array.isArray(root[section][name])) {
+      root[section][name][parseInt(index)] = value
+    }
+  })
+}
+//remove up to here//
+
 const switchTab = function switchTab(target) {
   $('section.active', 0).classList.remove('active')
   $(`section[data-page='${target}']`, 0).classList.add('active')
@@ -177,6 +201,8 @@ const sendMessage = function sendMessage (message) {
       // css editor
 
       config.set('custom_css', window.editor.getValue())
+      applyCustomLocales()
+window.locale.localizeAll()
 
       config.save()
       sendMessage('restyle')
