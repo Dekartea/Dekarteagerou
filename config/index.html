@@ -96,6 +96,15 @@ window.locale = new Locale(window.config.get('lang'))
 
 document.addEventListener('DOMContentLoaded', _ => {
   window.tabconfig = new Tabconfig()
+	// rename tab labels
+  const dpsLabel = config.get('locale.deal.per_second.0')
+  const dpsDesc  = config.get('locale.deal.per_second.1')
+
+  if (window.locale && window.locale.locale) {
+    if (dpsLabel) window.locale.locale['deal']['per_second'][0] = dpsLabel
+    if (dpsDesc)  window.locale.locale['deal']['per_second'][1] = dpsDesc
+  } //end tab labels//
+	
   window.editor = ace.edit('editor')
   editor.$blockScrolling = Infinity
   editor.setTheme('ace/theme/tomorrow_night_eighties')
@@ -124,7 +133,7 @@ document.addEventListener('DOMContentLoaded', _ => {
  viewBox="0 0 24 24" class="icon">
  <path d="M12 2L2 7l10 5 10-5-10-5zm0 13l-10-5v6l10 5 10-5v-6l-10 5z"/>
  </svg>
- <label>Dekartea's Settings 0.1</label>
+ <label>Dekartea's Settings 0.2</label>
 </li>
         <li class="mobile-only">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
