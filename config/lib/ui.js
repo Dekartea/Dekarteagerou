@@ -5,7 +5,10 @@ const switchTab = function switchTab(target) {
   $(`section[data-page='${target}']`, 0).classList.add('active')
   let targetLi = $(`li[data-page='${target}']`, 0)
 
-  $('header h2', 0).textContent = $(`li[data-page='${target}']`, 0).textContent
+const sidebarItem = $(`li[data-page='${target}']`, 0)
+const sidebarLabel = sidebarItem?.querySelector('label')?.textContent
+
+$('header h2', 0).textContent = sidebarLabel || "Settings"
   $('header h2', 0).setAttribute(
     'data-locale',
     $(`li[data-page='${target}'] > label`, 0).getAttribute('data-locale')
